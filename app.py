@@ -596,7 +596,7 @@ def parse_llm_response(response):
         }
 
 # Define API routes
-@app.route("/query", methods=["GET", "POST"])
+@app.post("/query")
 async def query_knowledge_base(request: QueryRequest):
     try:
         # Log the incoming request
